@@ -1,9 +1,10 @@
+// VARIABLES:
 const display = document.querySelector("#display");
 const numbers = document.querySelectorAll(".number");
 const operators = document.querySelectorAll(".operators")
 let autoClear = true;
 
-// NUMBERS
+// NUMBERS:
 for (let i = 0; i < numbers.length; i++) {
     numbers[i].addEventListener("click", writingNumbers);
 };
@@ -16,7 +17,7 @@ function writingNumbers(event) {
     display.innerText = display.innerText + text;
 };
 
-// OPERATORS
+// OPERATORS:
 for (let i = 0; i < operators.length; i++) {
     operators[i].addEventListener("click", writingOperators);
 };
@@ -30,7 +31,7 @@ function writingOperators(event) {
     
 };
 
-// CALCULATION
+// CALCULATION:
 const equal = document.querySelector("#equal");
 equal.addEventListener("click", calculation);
 function calculation() {
@@ -46,14 +47,14 @@ function calculation() {
     }
 };
 
-// CLEAR
+// CLEAR:
 const clearButton = document.querySelector("#clear");
 clearButton.addEventListener("click", clearDisplay);
 function clearDisplay() {
     display.innerText = '';
 };
 
-//KEYBOARD
+//KEYBOARD:
 document.addEventListener("keyup", keyboard);
 function keyboard(e) {
     console.log(e.code);
